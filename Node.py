@@ -28,7 +28,7 @@ class Node:
 
     def is_valid(self, node: Any) -> None:
         """
-        Метод is_valid
+        Метод is_valid проверки на корректность связываемости узла
         :param node:
         :return:
         """
