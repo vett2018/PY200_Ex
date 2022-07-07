@@ -3,5 +3,5 @@
 Фомин
 
 Две ветки:
-1. DoubleLinkedNode
-2. DoubleLinkedList
+1. DoubleLinkedList
+2. DoubleLinkedNode
