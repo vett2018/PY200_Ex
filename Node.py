@@ -33,7 +33,7 @@ class Node:
         :param node:
         :return:
         """
-        if not isinstance(node, (type(None), Node)):
+        if not isinstance(node, (type(None), Node)): #проверка node тип None и тип класса Node
             raise TypeError
 
     @property
@@ -61,10 +61,13 @@ if __name__ == '__main__':
     node_1.next = node_2
     node_2.next = node_3
 
+    print("вызов метода str")
     print(node_1)
     print(node_2)
     print(node_3)
+    print("____________")
 
+    print("вызов метода repr")
     print(repr(node_1))
     print(repr(node_2))
-    print(repr(node_2))
+    print(repr(node_3))
