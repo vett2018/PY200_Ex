@@ -11,15 +11,15 @@ class Node:
         self.value = value
         self.next = next_
 
-    def __str__(self) -> str:
+    def __str__(self) -> str: #магический метод для отображения информации об объекте класса для пользователей
         """
         Метод __str__ возвращает строковое представление объекта
         :return: Значение узла и сам узел
         """
-        return str(self.value)
-        #return f"Node({self.value}, {self.next})"
+        #return str(self.value)
+        return f"Node({self.value}, {self.next})"
 
-    def __repr__(self):
+    def __repr__(self): # магический метод для отображения информации об объекте класса в режиме отладки (для разработчиков)
         """
         Метод __repr__ возвращает печатное представление объекта
         :return: Значение узла и сам узел
@@ -65,3 +65,6 @@ if __name__ == '__main__':
     print(node_2)
     print(node_3)
 
+    print(repr(node_1))
+    print(repr(node_2))
+    print(repr(node_2))
