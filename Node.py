@@ -2,29 +2,30 @@ from typing import Any, Optional
 
 class Node:
     """ Класс, который описывает узел связного списка. """
-    def __init__(self, value: Any):
+    def __init__(self, value: Any, next_: Optional["Node"] = None):
         """
-        Инициализация атрибутов класса
-        :param value:
         Метод инициализация атрибутов класса
         :param value: Любое значение, которое помещено в узел
+        :param next_: Следующий узел, если он есть
         """
         self.value = value
-        self.next = None
+        self.next = next_
 
     def __str__(self) -> str:
         """
         Метод __str__ возвращает строковое представление объекта
         :return: Значение узла и сам узел
         """
-        return f"Node({self.value}, {self.next})"
+        return str(self.value)
+        #return f"Node({self.value}, {self.next})"
 
     def __repr__(self):
         """
         Метод __repr__ возвращает печатное представление объекта
         :return: Значение узла и сам узел
         """
-        return f"Node({self.value}, {self.next})"
+        return f"Node({self.value}, {None})" if self.next is None else f"Node({self.value}, Node({self.next}))"
+        #return f"Node({self.value}, {self.next})"
 
     def is_valid(self, node: Any) -> None:
         """
@@ -32,10 +33,26 @@ class Node:
         :param node:
         :return:
         """
-        def is_valid(self, node: Any) -> None:
-            if not isinstance(node, (type(None), Node)):
-                raise TypeError
+        if not isinstance(node, (type(None), Node)):
+            raise TypeError
 
+    @property
+    def next(self):
+        """
+        Декоратор (getter) - метод, получения доступа к атрибуту
+        :return:
+        """
+        return self._next
+
+    @next.setter
+    def next(self, next_: Optional["Node"]):
+        """
+        Декоратор (Setter) - метод, изменения/установления значения атрибутов
+        :param next_:
+        :return:
+        """
+        self.is_valid(next_)
+        self._next = next_
 
 if __name__ == '__main__':
     node_1 = Node(1)
