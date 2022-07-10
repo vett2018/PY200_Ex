@@ -2,6 +2,7 @@ from typing import Any, Optional
 
 from Node import Node
 
+
 class DoubleLinkedNode(Node):
     """Дочерний класс который описывает двусвязный список"""
     def __init__(self, value: Any, next_ : Optional["Node"] = None, prev_: Optional["Node"] = None):
