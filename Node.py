@@ -16,8 +16,8 @@ class Node:
         Метод __str__ возвращает строковое представление объекта
         :return: Значение узла и сам узел
         """
-        #return str(self.value)
-        return f"Node({self.value}, {self.next})"
+        return f"Node ({str(self.value)})"
+        #return f"Node({self.value}, {self.next})"
 
     def __repr__(self): # магический метод для отображения информации об объекте класса в режиме отладки (для разработчиков)
         """
@@ -71,3 +71,5 @@ if __name__ == '__main__':
     print(repr(node_1))
     print(repr(node_2))
     print(repr(node_3))
+
+    # print([node_1, node_2, node_3])
