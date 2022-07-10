@@ -3,6 +3,7 @@ from typing import Any, Optional, Iterable
 from node_and_doublenode import DoubleLinkedNode
 from linked_list import LinkedList
 
+
 class DoubleLinkedList(LinkedList):
     @staticmethod
     def double_linked_nodes(left_node: Optional[DoubleLinkedNode] = None, right_node: Optional[DoubleLinkedNode] = None) -> None:

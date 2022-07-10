@@ -3,6 +3,7 @@ from collections.abc import MutableSequence
 
 from node_and_doublenode import Node
 
+
 class LinkedList(MutableSequence):
     """Класс который описывает односвязный список"""
     def __init__(self, data: Iterable = None):
