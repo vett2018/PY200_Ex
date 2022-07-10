@@ -4,4 +4,5 @@
 
 Две ветки:
 1. DoubleLinkedList
-2. DoubleLinkedNode
+2. DoubleаLinkedNode
+В ветке DoubleLinkedNode написан файл юнит теста метода __repr__ класса Node
