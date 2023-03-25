@@ -1,6 +1,5 @@
 Экзамен PY200
 
-
 Две ветки:
 1. DoubleLinkedList
 2. DoubleаLinkedNode
